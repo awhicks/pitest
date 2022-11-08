@@ -271,7 +271,7 @@ public class PitestTaskTest {
   public void shouldForkWhenExecuted() throws Exception {
     this.pitestTask.execute(this.java);
 
-    // flipped
+    // fork false
     verify(this.java).setFork(false);
   }
 
