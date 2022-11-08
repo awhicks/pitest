@@ -62,7 +62,7 @@ public class PitestTask extends Task { // NO_UCD (test only)
     java.setClasspath(generateLaunchClasspath());
     java.setClassname(MutationCoverageReport.class.getCanonicalName());
     java.setFailonerror(true);
-    java.setFork(true);
+    java.setFork(false);
 
     checkRequiredOptions();
     for (final Map.Entry<String, String> option : this.options.entrySet()) {

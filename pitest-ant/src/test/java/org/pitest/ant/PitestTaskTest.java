@@ -245,7 +245,7 @@ public class PitestTaskTest {
     this.pitestTask.execute(this.java);
     verify(this.arg).setValue("--mutableCodePaths=foo");
   }
-  
+
   @Test
   public void shouldOnlyPassTheSpecifiedOptions() throws Exception {
     this.pitestTask.setVerbose("true");
@@ -271,7 +271,8 @@ public class PitestTaskTest {
   public void shouldForkWhenExecuted() throws Exception {
     this.pitestTask.execute(this.java);
 
-    verify(this.java).setFork(true);
+    // flipped
+    verify(this.java).setFork(false);
   }
 
   @Test
